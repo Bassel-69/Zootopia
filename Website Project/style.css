@@ -1,0 +1,800 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/jungle_path_trees_158152_1920x1080.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 125px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 16px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links ul li::after{
+    content:'' ;
+    width: 0%;
+    height: 2px;
+    background: #7CFC00;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 65px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #fff;
+}
+.get-tick{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.get-tick:hover{
+    border: 1px solid #008000;
+    background: #008000;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+/*navigation for mobiles and taplets*/
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #008000;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+     
+}
+
+/*------ starting point ------*/
+
+#auto {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+p.overview{
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+p.ins {
+    color: #777;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+p.outs{
+    color: #000;
+    font-size:20px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+/*----- Routes Section -----*/
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.routes{
+    flex-basis: 31%;
+    background: rgba(29,186,73,0.5);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.box{color: #777;}
+.box:hover{color: #000;}
+
+.rimg{
+    width: 100%;
+    border-radius: 2%;
+    opacity: 0.8;
+    padding-top: 0px;
+    margin-top: 0%;
+}
+
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.routes:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+}
+
+/*----- Routes Section for mombiles and tablets -----*/
+@media(max-width: 700px){
+    .row{
+        flex-direction: column   
+    }
+
+}
+
+
+/*----- may take your interest-----*/
+.bonus{
+    width: 80%;
+    margin: auto;
+}
+
+.bonus h1{
+    text-align: center;
+    padding-top: 100px;
+    color: #2f4f4f;
+}
+
+.bonus-col{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bonus-col img{
+    width: 140%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(0,128,0,0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 30px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 50%;
+    opacity: 1;
+}
+
+/*----- Footer -----*/
+.footer{
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background:  #00281f;
+    color: #fff;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.Ticket{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.Ticket:hover{
+    border: 1px solid #008000;
+    background: #008000;
+    transition: 1s;
+}
+
+.icons .fa{
+    color: #008000;
+    margin: 0 15px;
+    margin-top: 30px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.Gmail{
+    color: #fff;
+    text-decoration: none;
+}
+.Gmail:hover{
+    color: blue;
+	text-decoration: underline;
+}
+.copyright {
+    font-size: 10pt;
+    text-align: center;
+    padding-bottom: 10px;
+    color: grey;
+}
+/*----- Footer sheet ends-----*/
+
+/*-------------------- About Page --------------------*/
+.about-header{
+    height: 50vh;
+    width: 100%;
+     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/Amur-tiger-Panthera-tigris-altaica-Marwell-Zoo-homepage.jpg.webp);
+     background-position: center;
+     background-size: cover;
+     text-align: center;
+     color: #fff;
+}
+
+.about{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col{
+    flex-basis: 50%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.about-col h1{
+    padding-top: 0;
+    padding-right: 50px;
+}
+.about-col p{
+    padding: 15px 0 25px;
+    padding-right: 50px;
+    font-size: 20px;
+}
+.tag{
+    font-weight: 700;
+}
+
+/* Media queries for smaller screens */
+
+@media screen and (max-width: 768px) {
+    .about {
+      padding: 50px 0;
+    }
+    
+    .about-col {
+      flex-basis: 100%;
+      padding: 0 30px;
+      text-align: center;
+    }
+    
+    .about img {
+      width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .about h1 {
+      font-size: 24px;
+    }
+    
+    .about p {
+      font-size: 16px;
+    }
+    
+    .about img {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /*- - - -  - About body ends - - - - -*/
+  
+/* - - - - - about page sheet ends - - - - -*/
+
+/*- - - -  - contact us sheet starts - - - - -*/
+.contact-header{
+    height: 50vh;
+    width: 100%;
+     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RedPanda_Khumbie_0216-e1572641520537.jpg);
+     background-position: center;
+     background-size: cover;
+     text-align: center;
+     color: #fff;
+}
+
+.head-cont{
+    text-align: center;
+    padding-top: 50px;
+}
+.info{
+    text-align: center;
+    padding-top: 10px;
+    line-height: 135%;
+    font-size: 20px;
+}
+.contact-me{
+    text-align: center;
+}
+.via{
+    text-decoration: none;
+}
+
+
+/* Style for mobile screens */
+@media screen and (max-width: 600px) {
+    /* Adjust the height of the header */
+    .contact-header{
+        height: auto;
+    }
+    
+    /* Reduce the font size of the header text */
+    .contact-header h1{
+        font-size: 32px;
+    }
+    
+    /* Adjust the padding of the contact section */
+    .contact {
+        padding: 20px;
+    }
+    
+    /* Reduce the font size of the contact information */
+    .info{
+        font-size: 16px;
+    }
+}
+/*- - - -  - contact us sheet ends - - - - -*/
+
+/*- - - -  - Tickets sheet starts - - - - -*/
+.tickets-header{
+    height: 50vh;
+    width: 100%;
+     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/battle.creek_.19.ss_.GloryShot.jpg);
+     background-position: top;
+     background-size: cover;
+     text-align: center;
+     color: #fff;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="submit"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="submit"] {
+    background-color: #1bc70fd6;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #16890e;
+    color: #ffffff;
+  }
+
+/*- - - -  - Tickets validation message - - - - -*/
+#dialog-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #dialog-content {
+    background-color: rgb(227, 222, 222);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+  }
+  
+  #dialog-message {
+    margin-bottom: 10px;
+    white-space: pre-line;
+  }
+  
+  #dialog-check {
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #16890e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  
+  #dialog-check span {
+    line-height: 0;
+  }
+  
+  #dialog-button {
+    background-color: #1bc70fd6;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #dialog-button:hover{
+    background: #16890e;
+    color: #ffffff;
+    transition: 0s;
+}
+
+
+
+.Tickets img{
+    width: 30%;
+    border-radius: 10px;
+    display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto; /* Set the left and right margin to auto */
+    margin-top: 100px;
+    margin-bottom: 30px;
+    
+}
+
+
+/* Media queries for mobiles and taplets */
+
+@media screen and (max-width: 768px) {
+    .tickets-header {
+      height: 30vh;
+    }
+    
+    form {
+      width: 90%;
+      max-width: 600px;
+    }
+    
+    .Tickets img {
+      width: 50%;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .tickets-header {
+      height: 20vh;
+    }
+    
+    form {
+      width: 90%;
+      max-width: 400px;
+    }
+    
+    .Tickets img {
+      width: 80%;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+  }
+
+  /* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+
+    #dialog-box{
+        position:absolute;
+        align-items: center;
+    }
+
+    #dialog-content {
+        max-width: 100%;
+        align-items: center;
+    }
+    #dialog-message {
+        font-size: 16px;
+    }
+    #dialog-check {
+        top: -15px;
+        left: calc(50% - 15px);
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+    #dialog-button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    
+}
+  
+/*- - - -  - Tickets sheet ends - - - - -*/
+
+
+
+/*- - - -  - Crewtopia sheet starts - - - - -*/
+.crewtopia-header{
+    height: 50vh;
+    width: 100%;
+     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/jobs-StaffPhoto2.jpg);
+     background-position: top;
+     background-size: cover;
+     text-align: center;
+     color: #fff;
+}
+
+.crewtopia{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.crew-wrapper {
+    display: flex;
+    flex-direction: row-reverse; /* Invert the direction of the flex items */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .crew-col {
+    flex-basis: 45%;
+    margin-bottom: 50px;
+    padding: 30px 2px;
+  }
+  
+  .crew-col img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .crew-col h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .crew-col p {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+
+
+ /* Default styles for large screens */
+.srow {
+    display: flex;
+    flex-direction: row; /* keep default direction */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .left-col {
+    flex-basis: 45%;
+    margin-bottom: 50px;
+    padding: 30px 2px;
+  }
+  
+  .left-col:nth-child(2) {
+    order: 2; /* set the order of the second child element to 2 to move it to the right */
+  }
+  
+  .left-col:nth-child(1) {
+    order: 1; /* set the order of the first child element to 1 to move it to the left */
+  }
+  
+  .left-col img {
+    margin-top: 219px;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  
+  .left-col p{
+    font-size: 20px;
+    margin-bottom: 1000px;
+    padding-bottom: 260px;
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .srow {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .left-col {
+      flex-basis: 100%;
+      order: 1; /* reset the order of both child elements */
+      margin-bottom: 30px;
+    }
+    
+    .left-col:nth-child(2) {
+      order: 2; /* set the order of the second child element to 2 to move it to the bottom */
+    }
+  }
+  
+  .left-col p {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  
+  /*fourth part sheet */
+.srow2{
+    display: flex;
+    flex-direction: row; /* keep default direction */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .left-col2 {
+    flex-basis: 45%;
+    margin-bottom: 50px;
+    padding: 30px 2px;
+  }
+  
+  .left-col2:nth-child(2) {
+    order: 2; /* set the order of the second child element to 2 to move it to the right */
+  }
+  
+  .left-col2:nth-child(1) {
+    order: 1; /* set the order of the first child element to 1 to move it to the left */
+  }
+  
+  .left-col2 img {
+    margin-top: 90px;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  
+  .left-col2 p{
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .srow2 {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .left-col2 {
+      flex-basis: 100%;
+      order: 1; /* reset the order of both child elements */
+      margin-bottom: 30px;
+    }
+    
+    .left-col2:nth-child(2) {
+      order: 2; /* set the order of the second child element to 2 to move it to the bottom */
+    }
+  }
+  
+  .left-col2 p {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  /*- - - -  - Crewtopia sheet ends - - - - -*/

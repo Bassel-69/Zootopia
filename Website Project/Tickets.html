@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Zootopia</title>
+            <link rel="stylesheet" href="style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        </head> 
+        <body>
+            <!------ Page Header ----->
+            <section class="tickets-header">
+              <nav>
+                <img src="images/LogoMakr-0nJa14.png"  alt="website-logo">
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hidemenu();"></i>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="Tickets.html">Tickets</a></li>
+                        <li><a href="Crewtopia.html">Crewtopia</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showmenu();"></i>
+
+             </nav>
+              
+              <h1>Tickets</h1>
+              
+            </section>
+            
+            <!------ Tickets ------>
+            
+            <section class="Tickets">
+        
+             <img  src="images/tiger_gallery_edited.jpg">
+
+             <img src="images/Get Your Ticket Now.png">
+
+             
+    
+
+                
+                
+                <div>
+                    <form id="ticket-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="User123@email.com" required>
+                        
+                        <label for="tickets">Number of Tickets:</label>
+                        <input type="number" id="tickets" name="tickets" min="1" required>
+                        
+                        <label for="card">Credit Card Number:</label>
+                        <input type="text" id="card" name="card" placeholder="1111111111111111" required>
+                        
+                        <input type="submit" value="Purchase">
+                      </form>
+                      
+                      <!-- HTML code for the custom dialog box -->
+                      <div id="dialog-box">
+                        <div id="dialog-content">
+                          <div id="dialog-message"></div>
+                          <div id="dialog-check"><span>&#10004;</span></div>
+                          <button id="dialog-button">OK</button>
+                        </div>
+                      </div>
+                      
+                      <script src="Tickets.js"></script>
+
+
+                </div>
+            </section>
+            
+            
+
+            
+            <!----- Footer ----->
+            
+            <section class="footer">
+                <div class="ftr">
+                     <h3>About Us</h3>
+                     <p>We Are The Largest Zoo on Earth And for That We Consider Ourselves As A Nature Reserve On So Many Levels,Not Just for Our Home Size But For What We Offer for Its Family<br>
+                      <b>Another Home, Another Planet</b></p>
+                     <br>
+                     <div class="Cus">
+                     <p><i class="fa fa-envelope-o"></i> G-mail: <a class="Gmail" href="https://www.google.com">zootopia@gmail.com</a></p>
+                     <p><i class="fa fa-phone"></i>  Phone: +00 *** ***</p>
+                     </div>
+                      <br>
+                     <a href="Tickets.html"class="Ticket">Get Your Ticket Now</a>
+                     <br>
+                     <div class="icons">
+                        <i class="fa fa-facebook-official fa-2x"></i>
+                        <i class="fa fa-twitter fa-2x"></i>
+                        <i class="fa fa-pinterest fa-2x"></i>
+                        <i class="fa fa-tumblr fa-2x"></i>
+                        <i class="fa fa-instagram fa-2x"></i>
+                     </div>
+                     
+                     <div class="copyright">
+                            &copy; 2022 All rights reserved for zootopia
+                            <br>BSL
+                     </div>
+                     
+                     
+                </div>
+            </section>
+            
+            
+            
+            
+            
+
+            
+            
+            
+            
+            
+            <!---------- JavaScript code for smartphones and tablets menu  ---------->
+            <script type="text/javascript">
+                var navLinks = document.getElementById("navLinks");
+                function showmenu(){
+                    navLinks.style.right="0";
+                }
+                
+                function hidemenu(){
+                    navLinks.style.right="-200px";
+                }
+                
+            </script>
+            
+        </body>
+    </html>
